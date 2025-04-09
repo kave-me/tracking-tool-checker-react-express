@@ -157,6 +157,14 @@ export default function AuthPage() {
                           "Log In"
                         )}
                       </Button>
+                      <div className="text-center mt-4">
+                        <a 
+                          href="/auth/forgot-password" 
+                          className="text-sm text-primary hover:underline"
+                        >
+                          Forgot password?
+                        </a>
+                      </div>
                     </form>
                   </Form>
                 </CardContent>
