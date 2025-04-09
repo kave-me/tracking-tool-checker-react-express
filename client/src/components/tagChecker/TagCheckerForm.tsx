@@ -82,14 +82,15 @@ export default function TagCheckerForm() {
               name="url"
               render={({ field }) => (
                 <FormItem className="flex-grow">
-                  <div className="relative rounded-md">
-                    <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                  <div className="flex items-center relative">
+                    <div className="flex items-center absolute left-0 top-0 h-full pl-3 pointer-events-none">
                       <Globe className="h-5 w-5 text-gray-400" />
                     </div>
                     <FormControl>
-                      <Input
+                      <input
+                        type="text"
                         placeholder="https://www.example.com"
-                        className="pl-14 block w-full rounded-md bg-gray-50 py-3 px-4 border"
+                        className="pl-10 block w-full rounded-md border border-gray-300 bg-gray-50 py-3 px-4 focus:border-blue-500 focus:outline-none focus:ring-blue-500"
                         {...field}
                       />
                     </FormControl>
