@@ -1,12 +1,13 @@
 import { TagResults } from '@shared/types';
-import { Check, X, Info } from 'lucide-react';
+import { Check, X, Info, AlertTriangle } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { 
   Card, 
   CardHeader, 
   CardTitle, 
   CardDescription, 
-  CardContent
+  CardContent,
+  CardFooter
 } from '@/components/ui/card';
 import { 
   Alert, 
@@ -86,6 +87,17 @@ export default function ResultsDisplay({ results }: ResultsDisplayProps) {
             </div>
           ))}
         </CardContent>
+        
+        {results.error && (
+          <CardFooter className="bg-amber-50 border-t border-amber-100 px-4 py-3">
+            <div className="flex items-start">
+              <AlertTriangle className="h-5 w-5 text-amber-500 mt-0.5 mr-2 flex-shrink-0" />
+              <div className="text-sm text-amber-800">
+                <strong>Note:</strong> {results.error}
+              </div>
+            </div>
+          </CardFooter>
+        )}
       </Card>
       
       <Alert className="mt-6 bg-blue-50 text-blue-800 border-blue-100">
@@ -114,6 +126,12 @@ export default function ResultsDisplay({ results }: ResultsDisplayProps) {
           </div>
         </AlertDescription>
       </Alert>
+      
+      <div className="mt-6 text-center">
+        <p className="text-sm text-gray-500">
+          Want to save your scan history? <Link href="/auth" className="text-primary font-medium hover:underline">Sign up for free</Link>
+        </p>
+      </div>
     </div>
   );
 }

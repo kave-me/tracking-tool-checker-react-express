@@ -22,7 +22,7 @@ import ResultsDisplay from './ResultsDisplay';
 const formSchema = z.object({
   url: z.string()
     .min(1, 'Please enter a URL')
-    .refine(val => isValidUrl(val), 'Please enter a valid URL including http:// or https://')
+    .refine(val => isValidUrl(val), 'Please enter a valid website URL (e.g., example.com or www.example.com)')
 });
 
 type FormValues = z.infer<typeof formSchema>;
