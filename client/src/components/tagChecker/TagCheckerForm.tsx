@@ -22,7 +22,7 @@ import ResultsDisplay from './ResultsDisplay';
 const formSchema = z.object({
   url: z.string()
     .min(1, 'Please enter a URL')
-    .refine(val => isValidUrl(val), 'Please enter a valid website URL (e.g., example.com or www.example.com)')
+    .refine(val => isValidUrl(val), 'Please enter a valid URL including http:// or https://')
 });
 
 type FormValues = z.infer<typeof formSchema>;
@@ -89,8 +89,7 @@ export default function TagCheckerForm() {
                     <FormControl>
                       <Input
                         placeholder="https://www.example.com"
-                        className="pl-10 block w-full rounded-md bg-gray-50 py-3 px-4 border text-base"
-                        style={{ paddingLeft: "2.5rem" }}
+                        className="pl-10 block w-full rounded-md bg-gray-50 py-3 px-4 border"
                         {...field}
                       />
                     </FormControl>
