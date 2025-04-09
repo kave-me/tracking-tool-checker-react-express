@@ -89,7 +89,7 @@ export default function TagCheckerForm() {
                     <FormControl>
                       <Input
                         placeholder="https://www.example.com"
-                        className="pl-10 block w-full rounded-md bg-gray-50 py-3 px-4 border"
+                        className="pl-12 block w-full rounded-md bg-gray-50 py-3 px-4 border"
                         {...field}
                       />
                     </FormControl>
