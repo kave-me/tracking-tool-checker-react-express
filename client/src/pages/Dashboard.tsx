@@ -55,6 +55,7 @@ export default function Dashboard() {
   } = useQuery<DashboardStats>({
     queryKey: ['/api/dashboard/stats'],
     enabled: !!user, // Only run if user is logged in
+    retry: 1,
   });
 
   const { 
@@ -64,6 +65,7 @@ export default function Dashboard() {
   } = useQuery<TagScan[]>({
     queryKey: ['/api/dashboard/scans'],
     enabled: !!user && activeTab === 'history', // Only fetch when on history tab
+    retry: 1,
   });
 
   if (statsLoading && activeTab === 'overview') {
