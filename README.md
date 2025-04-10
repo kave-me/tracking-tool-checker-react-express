@@ -42,7 +42,7 @@ A modern web application for checking and validating tracking tools and tags on 
 
 1. Clone the repository
 ```bash
-git clone [repository-url]
+git clone https://github.com/kave-me/tracking-tool-checker-react-express.git
 cd TrackingToolChecker
 ```
 
