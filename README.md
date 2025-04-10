@@ -105,10 +105,14 @@ npm start
 - Support for multiple tag types and tracking solutions
 - Detailed reporting and analysis
 
+![Tag Checker Interface](readme/tag-checker.png)
+
 ### Blog System
 - CMS integration for content management
 - Markdown support
 - SEO-friendly blog posts
+
+![Blog Example](readme/blog-example.png)
 
 ## License
 
